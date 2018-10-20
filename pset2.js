@@ -33,9 +33,6 @@ const negateArr = arr => {
         findVal([1,2,3,4], 4); // 3
         findVal([1,2,3,4], 9); // -1
 */
-const findVal = (arr,val) => {
-      
-}
 
 
 /*
@@ -49,11 +46,11 @@ const findVal = (arr,val) => {
         removeOdds([1,2,3,4]); // [2,4]
         removeOdds([1,"2",3,4]); // [4]
 */
-/*const removeOdds = arr => {
-    const copyArr = arr.slice(0);
+const removeOdds = arr => {
+    let copyArr = arr.slice(0);
     for (let i =0 ; i < copyArr.length; i++){
-       if(arr[i] < 0 ){
-          copyArr[i] = copyArr[i] * -1
+       if(arr[i] %2 === 0 ){
+          copyArr[i] += 2;  
 
        } else{
         copyArr[i]
@@ -62,7 +59,8 @@ const findVal = (arr,val) => {
 
     return copyArr
    }
-   console.log(negateArr([-3,-2,1,2,3,-4])); */
+
+   console.log(removeOdds([1,2,3,4]));
 /*
     @func addSquares
     @param {array} arr
@@ -71,7 +69,15 @@ const findVal = (arr,val) => {
     @example - 
         addSquares([1,2,3,4); // [1,2,3,4,1,4,9,16]
 */
-
+const addSquares = arr => {
+    let result = [...arr]; 
+    for (let i = 0; i < arr.length; i ++){
+      // let root = Math.floor(Math.sqrt(num[i] * num[i]));
+      result.push(arr[i] * arr[i]); 
+    }
+   return result;
+}
+console.log(addSquares([1,2,3,4]));
 /*
     @func doubleify
     @param {array} arr
