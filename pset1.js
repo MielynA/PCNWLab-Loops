@@ -23,7 +23,16 @@ console.log("--------------end of problem 1---------------------");
     @desc - square each value in array
     @example - squareEach([1,2,3,4]); // [1,4,9,16]
 */
-
+const squareEach = arr => {
+    let result = []; 
+  for (let i = 0; i < arr.length; i ++){
+    // let root = Math.floor(Math.sqrt(num[i] * num[i]));
+    result.push(arr[i] * arr[i]); 
+  }
+ return result;
+}
+console.log(squareEach([1,2,3,4])); // [1,4,9,16]
+console.log("--------------end of problem 2---------------------"); 
 /*
     @func averageSquare
     @param {array} arr
@@ -37,7 +46,25 @@ console.log("--------------end of problem 1---------------------");
         // then find the averate of the array to the right
         averageSquare([1,2,3,4); // 7.5
 */
+/*const averageSquare = arr => {
+    let result = 0; 
+  for (let i = 0; i < arr.length; i ++){
+    // let root = Math.floor(Math.sqrt(num[i] * num[i]));
+    result.push(arr[i] * arr[i]); 
 
+  }
+  return  result / arr.length; 
+}
+*/
+const averageSquare = arr => {
+    let result = 0; 
+  for (let i = 0; i < arr.length; i ++){
+     result = result + arr[i];
+  }
+ return  result / arr.length  ;
+}
+console.log(averageSquare([1,2,3,4]));
+console.log("--------------end of problem 4---------------------"); 
 /*
     @func negateArr
     @param {array} arr
@@ -54,7 +81,14 @@ console.log("--------------end of problem 1---------------------");
     @desc - reverse an array
     @example - reverseArr([1,2,3,4]); // [4,3,2,1]
 */
+const reverseArr = arr => {
+   for (let i = arr.length -1; i >=0; i-- ){
+      console.log(arr[i])
 
+   }
+   // return arr;
+} 
+console.log(reverseArr([1,2,3,4]));
 /*
     @func negateBackwards
     @param {array} arr
