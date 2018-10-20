@@ -6,7 +6,16 @@
             find average of all numbers
     @example - average([1,2,3,4]); // 2.5
 */
-
+const average = num => {
+      let arr = 0; 
+    for (let i = 0; i < num.length; i ++){
+       arr = arr + num[i];
+    }
+   return arr / num.length;
+}
+   
+console.log(average([1,2,3,4]));
+console.log("--------------end of problem 1---------------------"); 
 /*
     @func squareEach
     @param {array} arr
