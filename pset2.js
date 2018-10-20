@@ -5,6 +5,20 @@
     @desc - takes all engative numbers and makes positive
     @example - removeNegatives([-3,-2,1,2,3,-4]); // [3,2,1,2,3,4]
 */
+const negateArr = arr => {
+    const copyArr = arr.slice(0);
+    for (let i =0 ; i < copyArr.length; i++){
+       if(arr[i] < 0 ){
+          copyArr[i] = copyArr[i] * -1
+
+       } else{
+        copyArr[i]
+       } 
+    }  
+
+    return copyArr
+   }
+   console.log(negateArr([-3,-2,1,2,3,-4]));
 
 /*
     @func findVal
@@ -19,6 +33,10 @@
         findVal([1,2,3,4], 4); // 3
         findVal([1,2,3,4], 9); // -1
 */
+const findVal = (arr,val) => {
+      
+}
+
 
 /*
     @func removeOdds
@@ -31,7 +49,20 @@
         removeOdds([1,2,3,4]); // [2,4]
         removeOdds([1,"2",3,4]); // [4]
 */
+/*const removeOdds = arr => {
+    const copyArr = arr.slice(0);
+    for (let i =0 ; i < copyArr.length; i++){
+       if(arr[i] < 0 ){
+          copyArr[i] = copyArr[i] * -1
 
+       } else{
+        copyArr[i]
+       } 
+    }  
+
+    return copyArr
+   }
+   console.log(negateArr([-3,-2,1,2,3,-4])); */
 /*
     @func addSquares
     @param {array} arr
