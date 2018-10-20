@@ -92,6 +92,14 @@ console.log("--------------end of problem 5---------------------");
     @example
         negateBackwards([1,2,3,4]); // [-4, -3, -2, -1]
 */
-
+const negateBackwards = arr => {
+    const copyArr1 = [...arr];
+    for (let i =copyArr1.length - 1; i >= 0; i--){
+        copyArr1[i]*= -1;
+    }
+       return copyArr1
+   }
+   console.log(negateBackwards([1,2,3,4]));
+   console.log("--------------end of problem 6---------------------"); 
 
 
