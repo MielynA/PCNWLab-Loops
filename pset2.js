@@ -19,7 +19,17 @@ const negateArr = arr => {
     return copyArr
    }
    console.log(negateArr([-3,-2,1,2,3,-4]));
+//
+const negateArr1 = arr => {
+    const arrResult = [];
+  for (let i=0;  i < arr.length; i++){
+     arrResult.push(Math.abs(arr[i]));
 
+  }
+   return arrResult;
+}
+console.log(negateArr1([-3,-2,1,2,3,-4]));
+console.log("--------------end of problem 1---------------------"); 
 /*
     @func findVal
     @param {array} arr
@@ -72,12 +82,12 @@ const removeOdds = arr => {
 const addSquares = arr => {
     let result = [...arr]; 
     for (let i = 0; i < arr.length; i ++){
-      // let root = Math.floor(Math.sqrt(num[i] * num[i]));
       result.push(arr[i] * arr[i]); 
     }
    return result;
 }
 console.log(addSquares([1,2,3,4]));
+
 /*
     @func doubleify
     @param {array} arr
