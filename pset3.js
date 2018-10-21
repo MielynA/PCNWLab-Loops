@@ -8,7 +8,15 @@
     @example - getMiddle([1,2,3); // [3]
                getMiddle([1,2,3,4]); // [2,3]
 */
+const getMiddle = arr => {
+    let middleIndex = Math.floor(arr.length / 2); 
+    return arr[middleIndex];
+    }
+  
 
+
+console.log(getMiddle([1,2,3]));
+console.log(getMiddle([1,2,3,4])); 
 /*
     @func addToMiddle
     @param {array} arr
@@ -20,7 +28,16 @@
     @example - addToMiddle([1,2,3], 0); // [1,2,0,3];
                addToMiddle([1,2,3,4], 0); // [1,2,0,3,4]
 */
+const addToMiddle = (arr1,addNum) => {
+     
+    let firstArr = arr1.slice(0,Math.ceil(arr1.length/2));   
+     let secondArr = arr1.slice(Math.ceil(arr1.length/2));
+     return firstArr.concat(addNum).concat(secondArr);
+  
 
+ }
+ console.log(addToMiddle([1,2,3], 0));
+ console.log(addToMiddle([1,2,3,4], 0));
 /*
     @func hasAtSymbol
     @param {string} email
