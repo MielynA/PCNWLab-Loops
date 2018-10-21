@@ -30,6 +30,7 @@ const negateArr1 = arr => {
 }
 console.log(negateArr1([-3,-2,1,2,3,-4]));
 console.log("--------------end of problem 1---------------------"); 
+
 /*
     @func findVal
     @param {array} arr
@@ -43,8 +44,19 @@ console.log("--------------end of problem 1---------------------");
         findVal([1,2,3,4], 4); // 3
         findVal([1,2,3,4], 9); // -1
 */
-
-
+const findVal = (arr,val) => {
+   for (let i=0;  i < arr.length; i++){
+       if(val === arr[i]){
+           return i ;
+       }
+       
+   }
+          return -1;
+}
+console.log(findVal([1,2,3,4], 1));
+console.log(findVal([1,2,3,4], 4));
+console.log(findVal([1,2,3,4], 9));
+console.log("--------------end of problem 2---------------------"); 
 /*
     @func removeOdds
     @param {array} arr
@@ -57,20 +69,17 @@ console.log("--------------end of problem 1---------------------");
         removeOdds([1,"2",3,4]); // [4]
 */
 const removeOdds = arr => {
-    let copyArr = arr.slice(0);
-    for (let i =0 ; i < copyArr.length; i++){
-       if(arr[i] %2 === 0 ){
-          copyArr[i] += 2;  
-
-       } else{
-        copyArr[i]
-       } 
-    }  
-
-    return copyArr
+    let resultArr = []
+    for (let i =0 ; i < arr.length; i++){
+       if(arr[i] %2 === 0){
+           resultArr.push(arr[i])
+       }
    }
-
+   return resultArr;
+}
    console.log(removeOdds([1,2,3,4]));
+   console.log(removeOdds([1,"2",3,4]));
+   console.log("--------------end of problem 3---------------------"); 
 /*
     @func addSquares
     @param {array} arr
@@ -87,6 +96,7 @@ const addSquares = arr => {
    return result;
 }
 console.log(addSquares([1,2,3,4]));
+console.log("--------------end of problem 4---------------------"); 
 
 /*
     @func doubleify
@@ -95,7 +105,18 @@ console.log(addSquares([1,2,3,4]));
     @desc - take each value of array, add same value right after
     @example - doubleify([1,2,3,4); // [1,1,2,2,3,3,4,4]
 */
-
+const doubleify = arr => {
+    let result = []; 
+    for (let i = 0; i < arr.length; i ++){
+        for(let j=0; 2 > j; j++){
+            result.push(arr[i]) 
+        }
+    
+    }
+   return result;
+}
+console.log(doubleify([1,2,3,4]));
+console.log("--------------end of problem 5---------------------"); 
 
 /*
     @func findMax
